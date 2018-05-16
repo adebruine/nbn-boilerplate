@@ -29,5 +29,13 @@ module.exports = {
             template: './src/index.html',
             filename: './index.html' //relative to root of the application
         })
- ]
+ ],
+ node: {
+  fs: 'empty'
+},
+resolve: {
+    alias: {
+       handlebars: 'handlebars/dist/handlebars.min.js'
+    }
+}
 };
