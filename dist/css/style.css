@@ -1,0 +1,68 @@
+body {
+	margin: 0;
+}
+
+/*FOR DEMO ONLY*/
+#padder {
+  margin: 20px;
+  padding: 20px;
+}
+/*END FOR DEMO ONLY*/
+
+/*Topbar*/
+header {
+	padding: 0.5em;
+	height: 2.25em;
+  background-color: #37235E;
+	/*background-color: #501f84; /* this is NBN purple */*/
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#logo {
+	width: 2.25em;
+}
+
+/*Main header*/
+h1 {
+
+}
+
+/*Main subhead*/
+h2 {
+
+}
+
+/*Author credit*/
+h3 {
+
+}
+
+/*Photo captions*/
+h4 {
+
+}
+
+/*Photo credits*/
+h5 {
+
+}
+
+/*Default links*/
+a {
+
+}
+
+a:hover {
+
+}
+
+/*Horizontal lines*/
+hr.short {
+
+}
+
+hr.long {
+
+}
