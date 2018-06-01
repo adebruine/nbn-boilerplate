@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>A Wildcat’s guide to sexual health | North by Northwestern</title> <!-- change to title -->
+		<meta name="keywords" content="">
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="North by Northwestern"/> <!-- change to title -->
+		<meta property="og:description" content="Award-winning independent student journalism."/> <!-- change to dek -->
+		<meta property="og:image" content="./../src/assets/nbn-header.png"/> <!-- change to featured image -->
+		<meta property="og:image:width" content="1024"/> <!-- change to featured image width (px) -->
+		<meta property="og:image:height" content="768"/> <!-- change to featured image height (px) -->
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://northbynorthwestern.com/"/> <!-- change to article url: apps.northbynorthwestern.com/{s3-folder-name} -->
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:site" content="@nbn_tweets"/>
+		<meta name="twitter:title" content="North by Northwestern"/> <!-- change to title -->
+		<meta name="twitter:description" content="Award-winning independent student journalism."/> <!-- change to dek -->
+		<meta name="twitter:image" content="./../src/assets/nbn-header.png"/> <!-- change to featured image -->
+
+		<!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./../../css/story.css" />
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+		<link rel="manifest" href="assets/favicons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- special script -->
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+            integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
+    <!-- ArchieML -->
+    <!-- JQuery -->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+		<!-- Google Analytics -->
+		<!-- <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-27829802-1', 'auto');
+			ga('send', 'pageview');
+		</script> -->
+	</head>
+	<style>
+	body {
+		padding: 0;
+	}
+	#mapid, #descrip {
+    float: left;
+}
+
+.container {
+    height: auto;
+
+    display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+    flex-flow: row wrap;
+}
+
+#mapid {
+    width: 50%;
+}
+
+#descrip {
+	width: 50%
+}
+
+#descrip > p {
+    padding-left: 5%;
+}
+
+#mapid { height: 480px; width: 350px; }
+
+@media all and (max-width: 800px) {
+  #mapid, #descrip {
+    width: 100%;
+}
+}
+
+	</style>
+	<body>
+		<header>
+			<a href="http://www.northbynorthwestern.com/" target="_blank"><img id="logo" alt="logo"
+				href="http://www.northbynorthwestern.com/"
+				src="http://nbn-housing.s3.amazonaws.com/static/img/nbn-logo.png">
+			</a>
+		</header>
+		<div class='article-header'>
+			<div class='headline'>
+				<h1 class="hed">A Wildcat’s guide to sexual health</h1>
+				<h3 class='byline'>By <a href='http://www.northbynorthwestern.com/author/ritaliu/' target='_blank'>Rita Liu</a></h3>
+			</div>
+		</div>
+		<div class="blackboard">
+			<p>College comes with a whole slew of new things to worry about: classes, tough professors,
+				midterms, the whole shebang. However, something that people often forget to worry about
+				is sexual health. Since a lot of students have been with the same family doctor for
+				most of their childhoods, the idea of seeking out a new doctor in the Evanston area may
+				seem kind of daunting. However, there are many options for those who are looking.</p>
+			<div class="container">
+			        <div id="mapid"></div>
+			        <div id="descrip"><p>Click a location on the map to learn more!</p></div>
+			</div>
+		</div>
+		<footer class="nbn-footer">
+			<div class="footer-block">
+				<div class="footer-item footer-center">
+					<p>Production by <b>Audrey DeBruine</b> for North by Northwestern</p>
+					<p>&copy; North by Northwestern, May 20, 2018.</p>
+					<p>All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		 <script type='text/javascript'>
+
+				 // json of google doc text: http://127.0.0.1:6006/1KZ0hBfNI78miRWlT0XfWQm2LqCSLQuD1hZnyDt6OkhU
+
+				locations = [{
+						'name': 'Northwestern Medical Center',
+						'coordinates': [42.0522868,-87.6788622],
+						'address': '633 Emerson St, Evanston, IL 60208',
+						'content':  '<p>Who doesn’t love Searle? While almost everyone has either heard a horror story about the beloved on-campus medical center, or personally experienced its wonders, it is still the most convenient, cost-effective resource on campus. In terms of sexual health, their services are actually pretty great: they offer everything from birth control to STI testing.</p>'+
+						'<p>If you are covered by the Northwestern Health Insurance, they offer generic brands of birth control for no additional cost. A Plan B pill will cost you about $20 per dose, which is a lot cheaper than what you can find at most pharmacies – just bring your Wildcard. They also offer a variety of different STI tests, again covered by the Northwestern Health Insurance. If you have a different plan, the prices will range from $17 (syphilis) to $70 (HPV) – which is still cheaper than most clinics. Also, on the third floor of the Northwestern Medical Center is CARE, where the members of SHAPE operate – highly-trained, socially conscious peer educators who will take the time to talk you through the pros and cons of different birth control options, educate you on STIs and have access to a plethora of information and free supplies. They also have a table at either Norris or in front of old Kellogg every Friday from 9 a.m. to 4 p.m. if you are too busy to make a trip to Searle.</p>'+
+						'<p> <a href="https://www-healthy.nuhs.northwestern.edu/login_directory.aspx">Click here to view and schedule appointment times.</a></p>'
+				},{
+						'name': 'Planned Parenthood',
+						'coordinates': [41.9862892,-87.6594],
+						'address': '5725 N. Broadway, Chicago, IL 60660',
+						'content': '<p>If you are not covered by the Northwestern Health Insurance Plan, or if you are interested in getting an IUD, you might prefer to visit Planned Parenthood. The closest one is in Rogers Park, about 35 minutes away, on the red line - get off at Bryn Mawr. The IUD costs $848 at face value, but as you might know, Planned Parenthood operates on a pay-as-you-can basis, and takes most forms of insurance. They will tell you your expected contribution before your appointment if you call them (their number is 773-942-7193). As with Searle, Planned Parenthood offers STI testing, although it is slightly more expensive: according to the secretary at this branch, the tests range from $40-60 if you’re non-symptomatic.'+
+						'<p>To view and schedule an appointment times: <a href=\"https://www.plannedparenthood.org/health-center/illinois/chicago/60660/rogers-park-health-center-2266-90430\">https://www.plannedparenthood.org/health-center/illinois/chicago/60660/rogers-park-health-center-2266-90430</a></p>'
+
+				},{
+						'name': 'Kimberly Moloney, M.D.',
+						'coordinates': [42.0480149,-87.6804697],
+						'address': '636 Church St. Suite 603, Evanston, IL 60201',
+						'content': '<p>Dr. Moloney is  a  local gynecologist in Evanston with a small practice located between Whole Foods and Chipotle. She is the one I personally went to my freshman year, after rave reviews from a friend. She offers free birth control consultations, and generally will spend about an hour in each consultation, going over your medical history, asking questions, and explaining the options available to ensure that you end up with the option best suited for you. She’s very friendly and honest, and well loved on Yelp. One <a href=\"https://www.yelp.com/biz/kimberly-moloney-md-evanston\">particularly enthusiastic review</a> reads, “TY Vagina Doctor u rock!!” Beyond her consultation, Dr. Moloney’s services are a bit more expensive than the other options on the list, so if you choose to see her for tests or get birth control from her, have your insurance information ready and check with her receptionist - she will let you know how much you are expected to pay.'+
+						'<p>To schedule an appointment: 847-864-6100</p>'
+
+				},{
+						'name': 'Howard Brown Health Center',
+						'coordinates': [41.9999754,-87.671648],
+						'address': '6500 N. Clark Street, Chicago IL, 60626',
+						'content': '<p>The Howard Brown Health Center requires some travel time (around 46 minutes), but it offers some free services, which makes it immediately endearing. They hold walk-in times Monday through Thursday from noon to 7 p.m., and on Fridays from 9 a.m. to 4 p.m., and serve on a first-come first-served basis. As promised, they administer free HIV and pregnancy tests. They also provide trans and non gender-conforming health care, such as hormone administration and monitoring.</p> <p>Contact them at:  773-564-4156</p>'
+				}];
+
+
+				var mymap = L.map('mapid').setView([42.0248553, -87.67674640000001], 12);
+
+				L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+						attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+						maxZoom: 18,
+						id: 'mapbox.streets',
+						accessToken: 'pk.eyJ1IjoiYWRlYnJ1aW5lIiwiYSI6ImNqYWNyczh1YjBjdjAyd28ybnVrN2FieDcifQ.4MiOQFZ5P1NJ9yyPiiGSWA'
+				}).addTo(mymap);
+
+
+				locations.forEach(function (m) {
+						var marker = L.marker(m.coordinates, {
+								'content': m.content
+				}).on('click', function (e){
+						document.getElementById('descrip').innerHTML = e.target.options.content
+				}).addTo(mymap).bindPopup(m.name);
+				});
+
+				/*var marker_searle = L.marker([42.0522868,-87.6788622]).addTo(mymap)
+														.bindPopup("<b>Northwestern Medical Center</b><br>633 Emerson St, Evanston, IL 60208").openPopup();
+
+				 var marker_pp = L.marker([41.9862892,-87.6594]).addTo(mymap)
+														.bindPopup("<b>Planned Parenthood</b><br>5725 N. Broadway, Chicago, IL 60660");
+
+				var marker_moloney = L.marker([42.0480149,-87.6804697]).addTo(mymap)
+														.bindPopup("<b>Kimberly Moloney, M.D.</b><br>636 Church St. Suite 603, Evanston, IL 60201");
+
+				 var marker_brown = L.marker([41.9999754,-87.671648]).addTo(mymap)
+														.bindPopup("<b>Howard Brown Health Center</b><br>6500 N. Clark Street, Chicago IL, 60626");
+
+				 $(marker_searle).click(function() {
+						$("#descrip").innerHTML("Learn about good old Searle");
+				});*/
+		</script>
+
+	<!--<script type="text/javascript" src="bundle.js?9ca4d9a0a8bc6e99a4d3"></script>-->
+	</body>
+</html>

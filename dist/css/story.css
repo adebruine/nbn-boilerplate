@@ -1,11 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic|Merriweather+Sans:400,300,400italic,300italic|Open+Sans:400,700,600,300,400italic,300italic,600italic);
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
 	margin: 0;
+	padding: 0;
 }
 
 /*FOR DEMO ONLY*/
 #padder {
   margin: 20px;
-  padding: 20px;
+  padding: 80px;
 }
 /*END FOR DEMO ONLY*/
 header {
@@ -22,6 +26,23 @@ header {
 	width: 2.25em;
 }
 
+
+.article-header {
+	background-color: #3BBEA4;
+            background-position: 0 0, 80px 80px;
+            background-size: 3px 3px;
+						height: 200px;
+						color: white;
+						text-shadow: 0 0 10px black;
+						padding-top: 50px;
+						width: 100%;
+					}
+
+.headline {
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
 
 
 /*Import fonts*/
@@ -181,11 +202,18 @@ ul, ol{
 /******************/
 h1.hed{
     font-weight: 700;
-    font-size: 4em;
+    font-size: 3em;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     font-family: "Raleway", sans-serif;
+
+		position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+margin-top: -9px;
+
 }
 h2.dek {
     font-family: "Cabin", sans-serif;
@@ -199,7 +227,21 @@ h3.byline {
     font-size: 1.2em;
     font-weight: 300;
     font-family: "Merriweather", serif;
+		position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+margin-top: 100px;
+
 }
+
+h3.byline a {
+	color: white;
+}
+h3.byline a:hover {
+	color: white;
+}
+
 
 article header.article-meta{
     text-align: center;
@@ -279,10 +321,11 @@ li.long-nav-link a {
     max-width: 800px;
     margin: 0 auto;
     color: black;
+		padding-top: 40px;
 }
 
 .blackboard p {
-    font-size: 0.95em;
+    font-size: 1em;
     line-height: 2.2em;
     margin-bottom: 1em;
     font-family: "Merriweather", serif;
@@ -291,6 +334,7 @@ li.long-nav-link a {
 
 .blackboard p a{
   text-decoration: underline;
+	color: #42BDA4;
 }
 
 .blackboard p a:hover {

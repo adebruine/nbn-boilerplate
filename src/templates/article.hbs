@@ -62,20 +62,20 @@
 				src="http://nbn-housing.s3.amazonaws.com/static/img/nbn-logo.png">
 			</a>
 		</header>
-		<div id="padder">
-			<h1>{{title}}</h1>
-			<h2>Default subhead should look like this</h2>
-			<h3>author accreditation</h3>
-			{{body}}
-			<img src="" alt="logo">
-			<h4>Photo caption something cool happened</h4>
-			<h5>Here's who took it</h5>
+		<div class='article-header'>
+			<div class='headline'>
+				<h1 class="hed">{{title}}</h1>
+				<h3 class='byline'>By <a href='{{author-link}}' target='_blank'>{{author}}</a></h3>
+			</div>
+		</div>
+		<div class="blackboard">
+			{{story}}
 		</div>
 		<footer class="nbn-footer">
 			<div class="footer-block">
 				<div class="footer-item footer-center">
 					<p>Production by <b>Audrey DeBruine</b> for North by Northwestern</p>
-					<p>&copy; North by Northwestern, November 30, 2017.</p>
+					<p>&copy; North by Northwestern, May 20, 2018.</p>
 					<p>All rights reserved.</p>
 				</div>
 			</div>
